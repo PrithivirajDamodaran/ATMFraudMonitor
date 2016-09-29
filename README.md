@@ -1,4 +1,4 @@
-# ATMFraudMonitor
+# ATM Fraud Monitor 
 CEP for Banking systems powered by Apache Flink
 
 Steps to test:
