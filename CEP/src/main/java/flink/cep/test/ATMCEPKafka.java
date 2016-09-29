@@ -44,9 +44,11 @@ public class ATMCEPKafka {
 				new ATMFraudSchema(),       // Text to POJO Deserialiser for Kafka streams  
 				props
 				);
-
-
+		
+		// Currently using the Ingest time as Event time, should expand to extract timestamp from ATMFraudEvent
+		// https://ci.apache.org/projects/flink/flink-docs-master/dev/event_timestamps_watermarks.html
 		DataStream<ATMFraudEvent> ATMTXNStream = env.addSource(consumer).assignTimestampsAndWatermarks(new IngestionTimeExtractor<>());
+		
 
 
 		// FraudAlert pattern: Two consecutive events > 10K ATM withdrawal 
