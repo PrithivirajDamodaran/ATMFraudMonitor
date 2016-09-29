@@ -55,8 +55,8 @@ public class ATMCEPKafka {
 		Pattern<ATMFraudEvent, ?> alertPattern = Pattern.<ATMFraudEvent>begin("first")
 				.subtype(ATMFraudEvent.class)
 				.where(
-						new FilterFunction<ATMFraudEvent>() {
-						    @Override
+						new FilterFunction<ATMFraudEvent>() {             // Location radius filter can be added here
+						    @Override                                     // now its dummy and always returns true
 						    public boolean filter(ATMFraudEvent value) {
 						        return true;
 						    }
