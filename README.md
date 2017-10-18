@@ -1,4 +1,5 @@
-# ATM Fraud Monitor - companion code for the blog post http://bytecontinnum.com/apache-flink-cep-library-part-1/
+# ATM Fraud Monitor
+## companion code for the blog post http://bytecontinnum.com/apache-flink-cep-library-part-1/
 CEP for Banking systems powered by Apache Flink
 
 Steps to test:
